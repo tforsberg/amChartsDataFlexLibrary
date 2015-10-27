@@ -4,38 +4,39 @@ Use tNameValuePair.pkg
 Use cWebHtmlBox.pkg
 //
 
-    Struct tNameNumberPair
-        String sName
-        Number sValue
-    End_Struct
-    Struct tNameBooleanPair
-        String sName
-        Boolean sValue
-    End_Struct
+Struct tNameNumberPair
+    String sName
+    Number sValue
+End_Struct
 
-    Struct tAmAttributes
-        tNameValuePair[] sAttributes
-        tNameNumberPair[] nAttributes
-        tNameBooleanPair[] bAttributes
-    End_Struct
-    
-    Struct tamChartData
-        String domId
-        tAmAttributes attributes
-        tAmAttributes[] entries
-        tAmAttributes[] graphs
-        tAmAttributes[] valueAxes
-        Boolean chartScrollbar_pbEnabled
-        tAmAttributes chartScrollbar
-        Boolean categoryAxis_pbEnabled
-        tAmAttributes categoryAxis
-        Boolean balloon_pbEnabled
-        tAmAttributes balloon
-        Boolean chartCursor_pbEnabled
-        tAmAttributes chartCursor
-        tAmAttributes[] titles
-        tAmAttributes[] guides
-    End_Struct
+Struct tNameBooleanPair
+    String sName
+    Boolean sValue
+End_Struct
+
+Struct tAmAttributes
+    tNameValuePair[] sAttributes
+    tNameNumberPair[] nAttributes
+    tNameBooleanPair[] bAttributes
+End_Struct
+
+Struct tamChartData
+    String domId
+    tAmAttributes attributes
+    tAmAttributes[] entries
+    tAmAttributes[] graphs
+    tAmAttributes[] valueAxes
+    Boolean chartScrollbar_pbEnabled
+    tAmAttributes chartScrollbar
+    Boolean categoryAxis_pbEnabled
+    tAmAttributes categoryAxis
+    Boolean balloon_pbEnabled
+    tAmAttributes balloon
+    Boolean chartCursor_pbEnabled
+    tAmAttributes chartCursor
+    tAmAttributes[] titles
+    tAmAttributes[] guides
+End_Struct
     
 Class cAmAttributed is a Mixin
     Procedure AddNVP String sName String sValue tAmAttributes ByRef attributes

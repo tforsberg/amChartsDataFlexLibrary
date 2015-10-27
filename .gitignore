@@ -6,3 +6,5 @@ AppHtml/CssThemes/
 *.dsk
 *.loc
 *.mtd
+/AppSrc/*.dep
+/Programs/*.exe
